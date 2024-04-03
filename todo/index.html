@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html5>
+    <head>
+        <title>Todo</title>
+    </head>
+    <body>
+        <h1>My Todo list</h1>
+
+        <form id="todoForm">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <button type='submit' id="addbtn">Add</button>
+        </form>
+
+        <ol id="todoList"></ol>
+
+        <script> 
+
+        document.addEventListener( "DOMContentLoaded", function() {
+            const todoForm = document.getElementById('todoForm')
+            const todoList = document.getElementById('todoList')
+
+        todoForm.addEventListener('submit', function(event) {
+            event.preventDefault()
+            const nameInput = document.getElementById('name')
+            const name = nameInput.value.trim()
+            if (name !== '') {
+                const listItem = document.createElement('li')
+                listItem.textContent = name
+                const deleteButton = document.createElement('button')
+                deleteButton.textContent = 'Delete'
+                deleteButton.addEventListener('click', function() {
+                    todoList.removeChild(listItem)
+                    })
+                listItem.appendChild(deleteButton)
+                todoList.appendChild(listItem)
+                nameInput.value = ''
+                } else {
+                    alert('Please enter todo list.')
+                }
+                })
+            })          
+        </script>
+        <p><b>Developer: </b><i>Tshering Phuntsho</i></p>
+    </body>
+</html5>

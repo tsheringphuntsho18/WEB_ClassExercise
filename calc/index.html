@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html5>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>My simple Calculator</h1>
+        <form name="calculator">
+            <label for="box1">Val1</label>
+            <input type="number" id="box1"><br><br>
+            <label for="box2">Val2</label>
+            <input type="number" id="box2">
+        </form><br>
+        <button id="add" onclick="add()">Add</button>
+        <button id="multiply" onclick="multiply()">Multiply</button>
+        <button id="subtract" onclick="subtract()">Subtract</button>
+        <button id="divide" onclick="divide()">Divide</button><br>
+        <p>Answer is: <span id="result"></span></p>
+        <p><b>Developer: </b><i>Tshering Phuntsho</i></p>
+    </body>
+
+    <script>
+         function add(){
+            var a=Number(document.calculator.box1.value);
+            var b=Number(document.calculator.box2.value);
+            var c=a+b;
+            document.getElementById("result").textContent = c;
+        }
+
+        function multiply(){
+            var a=Number(document.calculator.box1.value);
+            var b=Number(document.calculator.box2.value);
+            var c=a*b;
+            document.getElementById("result").textContent = c;
+        }
+
+        function subtract(){
+            var a=Number(document.calculator.box1.value);
+            var b=Number(document.calculator.box2.value);
+            var c=a-b;
+            document.getElementById("result").textContent = c;
+        }
+
+        function divide(){
+            var a=Number(document.calculator.box1.value);
+            var b=Number(document.calculator.box2.value);
+            var c=a/b;
+            document.getElementById("result").textContent = c;
+        }
+
+    </script>
+    
+</body>
+
+</html>
