@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    padding-top: 10%;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#addbtn {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#addbtn:hover {
+    background-color: #4CAF50;
+}
+
+#todoList {
+    list-style: none;
+}
+
+#todoList li {
+    margin-top: 8px;
+}
+
+#todoList li.completed label {
+    text-decoration: line-through;
+    color: #6c6a6a;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+#todoList li button {
+    background-color: transparent;
+    border: none;
+    padding: 0; 
+    margin-left: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+#todoList li button img {
+    margin-bottom: -5px;
+    width: 100%;
+    height: 100%;
+}
+#todoList li input[type="checkbox"] {
+    margin-right: 15px;
+}
