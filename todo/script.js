@@ -7,7 +7,7 @@ todoForm.addEventListener('submit', function(event) {
     const nameInput = document.getElementById('name');
     const name = nameInput.value.trim();
     if (name !== '') {
-        const listItem = document.createElement('li')
+        const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.addEventListener('change', function() {
@@ -22,14 +22,16 @@ todoForm.addEventListener('submit', function(event) {
         deleteButton.appendChild(deleteImg);
         deleteButton.addEventListener('click', function() {
             todoList.removeChild(listItem);
-            })
+            });
+            
         listItem.appendChild(checkbox);
         listItem.appendChild(label);
         listItem.appendChild(deleteButton);
         todoList.appendChild(listItem);
         nameInput.value = '';
-        } else {
+        } 
+    else {
             alert('Please enter todo list.');
-        }
-        })
+        };
+        });
     });        
