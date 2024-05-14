@@ -35,3 +35,23 @@ todoForm.addEventListener('submit', function(event) {
         };
         });
     });        
+
+
+// Function to update the UI with todos
+const updateUIWithTodos = (todos) => {
+    const todoList = document.getElementById('todo-list');
+  
+    // Clear existing todo list
+    todoList.innerHTML = '';
+  
+    // Loop through todos and create <li> elements to display each todo
+    todos.forEach(todo => {
+      const listItem = document.createElement('li');
+      listItem.textContent = todo.text;
+      if (todo.completed) {
+        listItem.classList.add('completed');
+      }
+      todoList.appendChild(listItem);
+    });
+  };
+ 
